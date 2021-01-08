@@ -35,10 +35,12 @@ export default {
       this.todos.push(todoItem);
     },
   },
-  created: function () {
+  watch: { 
+    todosProps: function () {
     console.log("props",this.todosProps)
     this.todos = this.todosProps;
   },
+  }
 };
 </script>
 
